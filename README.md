@@ -1,6 +1,6 @@
 # raylib starter
 
-Just a simple Makefile basedproject to build games with raylib for HTML and Windows.
+Just a simple Makefile based project to build games with raylib for HTML and Windows.
 
 ## Prerequisites
 - a Windows OS
