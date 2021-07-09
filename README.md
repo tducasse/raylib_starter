@@ -15,10 +15,10 @@ Create the following architecture:
          - raylib.h
        - lib/
          - desktop/
-						- libraylib.a (compiled from source with PLATFORM_DESKTOP)
-					- web/
-						- libraylib.a (compiled from source with PLATFORM_WEB)
-						- shell.html (copied from source)
+            - libraylib.a (compiled from source with PLATFORM_DESKTOP)
+          - web/
+            - libraylib.a (compiled from source with PLATFORM_WEB)
+            - shell.html (copied from source)
        - resources/
          - images, sounds, etc
         main.c
