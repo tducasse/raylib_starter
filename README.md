@@ -5,7 +5,7 @@ Just a simple Makefile based project to build games with raylib for HTML and Win
 ## Prerequisites
 - a Windows OS
 - CMD or Powershell
-- make and gcc (mingw provides both)
+- make and gcc ([mingw](http://mingw-w64.org/doku.php) provides both)
 - a compiled version of libraylib.a for web and libraylib.a for desktop (or use the ones provided in this repo)
 
 ## Usage
