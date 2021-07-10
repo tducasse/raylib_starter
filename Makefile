@@ -129,26 +129,15 @@ ifeq ($(PLATFORM), PLATFORM_WEB)
 		FOLDER = build/web
 endif
 
-# Define a recursive wildcard function
-rwildcard=$(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $(subst *,%,$2),$d))
-
 # Define all source files required
-SRC_DIR = src
-OBJ_DIR = obj
-
-# Define all object files from source files
-SRC = $(call rwildcard, *.c, *.h)
-#OBJS = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-OBJS ?= main.c
+OBJS ?= $(wildcard **/*.c)
 
 # Project target defined by PROJECT_NAME
 $(PROJECT_NAME): make_dirs $(OBJS)
 	$(CC) -o $(FOLDER)/$(PROJECT_NAME)$(EXT) $(OBJS) $(CFLAGS) $(INCLUDE_PATHS) $(LFLAGS) -D$(PLATFORM)
 
 # Compile source files
-# NOTE: This pattern will compile every module defined on $(OBJS)
-#%.o: %.c
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+%.o: %.c
 	$(CC) -c $< -o $@ $(CFLAGS) $(INCLUDE_PATHS) -D$(PLATFORM)
 
 make_dirs:
