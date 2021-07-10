@@ -52,6 +52,3 @@ Mkfile.old
 dkms.conf
 
 build/
-
-!lib/desktop/libraylib.a
-!lib/web/libraylib.a
