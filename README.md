@@ -6,22 +6,23 @@ Just a simple Makefile based project to build games with raylib for HTML and Win
 - a Windows OS
 - CMD or Powershell
 - make and gcc ([mingw](http://mingw-w64.org/doku.php) provides both)
-- precompiled `libraylib.a` for web and `libraylib.a` for desktop (or use the ones provided in this repo - compiled for raylib 3.7)
+- precompiled `libraylib.a` for web and `libraylib.a` for desktop (or use the ones provided in this repo - compiled for raylib 3.7 on windows with the default Makefile in the raylib source)
 
 ## Usage
 Create the following architecture:
 ```
-       - include/
-         - raylib.h
-       - lib/
-         - desktop/
-            - libraylib.a (compiled from source with PLATFORM_DESKTOP)
-          - web/
-            - libraylib.a (compiled from source with PLATFORM_WEB)
-            - shell.html (copied from source)
-       - resources/
-         - images, sounds, etc
-        main.c
+- include/
+  - raylib.h
+- lib/
+  - desktop/
+    - libraylib.a (compiled from source with PLATFORM_DESKTOP)
+  - web/
+    - libraylib.a (compiled from source with PLATFORM_WEB)
+    - shell.html
+- resources/
+  - images, sounds, etc
+- src
+  - main.c
 ```
 Then, in a cmd or powershell terminal:
 - `make web=1` to build for HTML
